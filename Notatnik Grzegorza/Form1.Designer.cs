@@ -41,7 +41,7 @@
             // 
             // Nowytekst
             // 
-            Nowytekst.BackColor = SystemColors.Highlight;
+            Nowytekst.BackColor = Color.FromArgb(128, 255, 255);
             Nowytekst.Location = new Point(12, 12);
             Nowytekst.Name = "Nowytekst";
             Nowytekst.Size = new Size(195, 34);
@@ -52,46 +52,51 @@
             // 
             // Usun
             // 
-            Usun.BackColor = Color.IndianRed;
-            Usun.Location = new Point(12, 65);
+            Usun.BackColor = Color.Red;
+            Usun.Location = new Point(918, 696);
             Usun.Name = "Usun";
-            Usun.Size = new Size(195, 34);
+            Usun.Size = new Size(112, 34);
             Usun.TabIndex = 1;
             Usun.Text = "Usuń notatkę";
             Usun.UseVisualStyleBackColor = false;
+            Usun.Click += Usun_Click;
             // 
             // dateTimePicker1
             // 
             dateTimePicker1.CalendarMonthBackground = Color.SkyBlue;
-            dateTimePicker1.Location = new Point(12, 126);
+            dateTimePicker1.Location = new Point(713, 138);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(346, 31);
+            dateTimePicker1.Size = new Size(317, 31);
             dateTimePicker1.TabIndex = 2;
             // 
             // zapisz
             // 
-            zapisz.Location = new Point(246, 12);
+            zapisz.BackColor = Color.GreenYellow;
+            zapisz.Location = new Point(12, 148);
             zapisz.Name = "zapisz";
-            zapisz.Size = new Size(112, 34);
+            zapisz.Size = new Size(195, 34);
             zapisz.TabIndex = 3;
-            zapisz.Text = "zapisz";
-            zapisz.UseVisualStyleBackColor = true;
+            zapisz.Text = "Zapisz";
+            zapisz.UseVisualStyleBackColor = false;
+            zapisz.Click += zapisz_Click;
             // 
             // Edytuj
             // 
-            Edytuj.Location = new Point(246, 65);
+            Edytuj.BackColor = Color.FromArgb(255, 224, 192);
+            Edytuj.Location = new Point(12, 82);
             Edytuj.Name = "Edytuj";
-            Edytuj.Size = new Size(112, 34);
+            Edytuj.Size = new Size(195, 34);
             Edytuj.TabIndex = 4;
             Edytuj.Text = "Edytuj";
-            Edytuj.UseVisualStyleBackColor = true;
+            Edytuj.UseVisualStyleBackColor = false;
+            Edytuj.Click += Edytuj_Click;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(404, 12);
+            textBox1.Location = new Point(246, 14);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(626, 145);
+            textBox1.Size = new Size(784, 102);
             textBox1.TabIndex = 5;
             // 
             // dataGridView1
@@ -102,7 +107,7 @@
             dataGridView1.Location = new Point(12, 203);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(1018, 527);
+            dataGridView1.Size = new Size(1018, 471);
             dataGridView1.TabIndex = 6;
             // 
             // Notatka1

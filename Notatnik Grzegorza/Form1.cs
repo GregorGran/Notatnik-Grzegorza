@@ -25,5 +25,28 @@ namespace Notatnik_Grzegorza
         {
             textBox1.Text = "";
         }
+
+        private void Edytuj_Click(object sender, EventArgs e)
+        {
+            isEditing = true;
+            textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+        }
+
+        private void Usun_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Notatnik.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
+            }
+            catch (Exception errormessege)
+            {
+                MessageBox.Show("Nie mo¿na usun¹æ tej notatki. " + errormessege.Message);
+            }
+        }
+
+        private void zapisz_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
