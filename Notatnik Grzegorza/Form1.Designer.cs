@@ -33,6 +33,10 @@
             dateTimePicker1 = new DateTimePicker();
             zapisz = new Button();
             Edytuj = new Button();
+            textBox1 = new TextBox();
+            dataGridView1 = new DataGridView();
+            Notatka1 = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // Nowytekst
@@ -44,6 +48,7 @@
             Nowytekst.TabIndex = 0;
             Nowytekst.Text = "Stwórz nową notatkę";
             Nowytekst.UseVisualStyleBackColor = false;
+            Nowytekst.Click += Nowytekst_Click;
             // 
             // Usun
             // 
@@ -81,12 +86,40 @@
             Edytuj.Text = "Edytuj";
             Edytuj.UseVisualStyleBackColor = true;
             // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(404, 12);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(626, 145);
+            textBox1.TabIndex = 5;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.BackgroundColor = SystemColors.ButtonFace;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Notatka1 });
+            dataGridView1.Location = new Point(12, 203);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.Size = new Size(1018, 527);
+            dataGridView1.TabIndex = 6;
+            // 
+            // Notatka1
+            // 
+            Notatka1.HeaderText = "Notatka1";
+            Notatka1.MinimumWidth = 8;
+            Notatka1.Name = "Notatka1";
+            Notatka1.Width = 150;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
             ClientSize = new Size(1042, 742);
+            Controls.Add(dataGridView1);
+            Controls.Add(textBox1);
             Controls.Add(Edytuj);
             Controls.Add(zapisz);
             Controls.Add(dateTimePicker1);
@@ -94,7 +127,10 @@
             Controls.Add(Nowytekst);
             Name = "Form1";
             Text = "Notatnik";
+            Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -104,5 +140,8 @@
         private DateTimePicker dateTimePicker1;
         private Button zapisz;
         private Button Edytuj;
+        private TextBox textBox1;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn Notatka1;
     }
 }
