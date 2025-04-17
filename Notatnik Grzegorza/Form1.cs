@@ -29,7 +29,8 @@ namespace Notatnik_Grzegorza
         private void Edytuj_Click(object sender, EventArgs e)
         {
             isEditing = true;
-            textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            textBox1.Text = Notatnik.Rows[dataGridView1.CurrentCell.RowIndex][0].ToString();
+            ;
         }
 
         private void Usun_Click(object sender, EventArgs e)
