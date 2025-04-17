@@ -35,7 +35,6 @@
             Edytuj = new Button();
             textBox1 = new TextBox();
             dataGridView1 = new DataGridView();
-            Notatka1 = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -52,7 +51,8 @@
             // 
             // Usun
             // 
-            Usun.BackColor = Color.Red;
+            Usun.BackColor = Color.DarkBlue;
+            Usun.ForeColor = SystemColors.ButtonFace;
             Usun.Location = new Point(918, 696);
             Usun.Name = "Usun";
             Usun.Size = new Size(112, 34);
@@ -71,7 +71,7 @@
             // 
             // zapisz
             // 
-            zapisz.BackColor = Color.GreenYellow;
+            zapisz.BackColor = Color.Aquamarine;
             zapisz.Location = new Point(12, 148);
             zapisz.Name = "zapisz";
             zapisz.Size = new Size(195, 34);
@@ -82,7 +82,7 @@
             // 
             // Edytuj
             // 
-            Edytuj.BackColor = Color.FromArgb(255, 224, 192);
+            Edytuj.BackColor = Color.MediumAquamarine;
             Edytuj.Location = new Point(12, 82);
             Edytuj.Name = "Edytuj";
             Edytuj.Size = new Size(195, 34);
@@ -101,21 +101,14 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = SystemColors.ButtonFace;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Notatka1 });
             dataGridView1.Location = new Point(12, 203);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(1018, 471);
             dataGridView1.TabIndex = 6;
-            // 
-            // Notatka1
-            // 
-            Notatka1.HeaderText = "Notatka1";
-            Notatka1.MinimumWidth = 8;
-            Notatka1.Name = "Notatka1";
-            Notatka1.Width = 150;
             // 
             // Form1
             // 
@@ -147,6 +140,5 @@
         private Button Edytuj;
         private TextBox textBox1;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Notatka1;
     }
 }

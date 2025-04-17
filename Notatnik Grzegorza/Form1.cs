@@ -46,6 +46,15 @@ namespace Notatnik_Grzegorza
 
         private void zapisz_Click(object sender, EventArgs e)
         {
+            if (isEditing)
+            {
+                Notatnik.Rows[dataGridView1.CurrentRow.Index][0] = textBox1.Text;
+                isEditing = false;
+            }
+            else
+            {
+                Notatnik.Rows.Add(textBox1.Text);
+            }
 
         }
     }
